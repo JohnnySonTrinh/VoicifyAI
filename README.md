@@ -7,11 +7,11 @@ Welcome to VocifyAI – a cutting-edge AI SaaS platform designed for podcast ent
 [![GitHub repo size](https://img.shields.io/github/repo-size/JohnnySonTrinh/voicifyai)](https://github.com/JohnnySonTrinh/voicifyai)
 
 <div align="center">
-  <br />
+  <br/>
     <a href="https://www.youtube.com/watch?v=FkowOdMjvYo" target="_blank">
       <img src="" alt="Project Banner">
     </a>
-  <br />
+  <br/>
 
   <div>
     <img src="https://img.shields.io/badge/-Typescript-black?style=for-the-badge&logoColor=white&logo=typescript&color=3178C6" alt="typescript" />
@@ -43,4 +43,15 @@ Welcome to VocifyAI – a cutting-edge AI SaaS platform designed for podcast ent
 
 **Responsive Design**: Fully functional and visually appealing across all devices and screen sizes.
 
-and many more, including code architecture and reusability 
+and many more, including code architecture and reusability
+
+## ⚙️ Tech Stack
+
+- Next.js
+- TypeScript
+- Tailwind CSS
+- React
+- Convex
+- Clerk
+- ShadCN
+- OpenAI
