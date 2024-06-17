@@ -3,18 +3,19 @@ import { v } from "convex/values";
 
 export default defineSchema({
   podcasts: defineTable({
-    user: v.id("_user"),
+    user: v.id("users"),
     podcastTitle: v.string(),
     podcastDescription: v.string(),
     audioUrl: v.optional(v.string()),
-    audioStorage: v.optional(v.id("_storage")),
-    imgeUrl: v.optional(v.string()),
-    imgeStorage: v.optional(v.id("_storage")),
+    audioStorageId: v.optional(v.id("_storage")),
+    imageUrl: v.optional(v.string()),
+    imageStorageId: v.optional(v.id("_storage")),
     author: v.string(),
     authorId: v.string(),
     authorImageUrl: v.string(),
-    voicePromt: v.string(),
-    imagePromt: v.string(),
+    voicePrompt: v.string(),
+    imagePrompt: v.string(),
+    voiceType: v.string(),
     audioDuration: v.number(),
     views: v.number(),
   })
@@ -23,8 +24,8 @@ export default defineSchema({
     .searchIndex("search_body", { searchField: "podcastDescription" }),
   users: defineTable({
     email: v.string(),
-    imgURL: v.string(),
-    name: v.string(),
+    imageUrl: v.string(),
     clerkId: v.string(),
+    name: v.string(),
   }),
 });
