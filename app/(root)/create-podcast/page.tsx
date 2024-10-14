@@ -26,8 +26,8 @@ import {
 import { cn } from "@/lib/utils";
 import { useState } from "react";
 import { Textarea } from "@/components/ui/textarea";
-import GeneratePodcast from "@/components/ui/GeneratePodcast";
-import GenerateThumbnail from "@/components/ui/GenerateThumbnail";
+import GeneratePodcast from "@/components/GeneratePodcast";
+import GenerateThumbnail from "@/components/GenerateThumbnail";
 import { Loader } from "lucide-react";
 import { Id } from "@/convex/_generated/dataModel";
 
@@ -52,7 +52,7 @@ const CreatePodcast = () => {
   const [audioDuration, setAudioDuration] = useState(0);
 
   const [voiceType, setVoiceType] = useState<string | null>(null);
-  const [voicePromt, setVoicePromt] = useState("");
+  const [voicePrompt, setVoicePrompt] = useState("");
 
   const [isSubmitting, setisSubmitting] = useState(false);
 
@@ -163,10 +163,10 @@ const CreatePodcast = () => {
             <GeneratePodcast
               setAudioStorageId={setAudioStorageId}
               setAudio={setAudioUrl}
-              voiceType={voiceType}
+              voiceType={voiceType!}
               audio={audioUrl}
-              voicePromt={voicePromt}
-              setVoicePromt={setVoicePromt}
+              voicePrompt={voicePrompt}
+              setVoicePrompt={setVoicePrompt}
               setAudioDuration={setAudioDuration}
             />
 
