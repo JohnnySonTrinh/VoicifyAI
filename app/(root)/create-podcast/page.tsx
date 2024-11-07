@@ -3,7 +3,6 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -138,7 +137,6 @@ const CreatePodcast = () => {
                 )}
               </Select>
             </div>
-
             <FormField
               control={form.control}
               name="podcastDescription"
@@ -169,7 +167,6 @@ const CreatePodcast = () => {
               setVoicePrompt={setVoicePrompt}
               setAudioDuration={setAudioDuration}
             />
-
             <GenerateThumbnail 
               setImage={setImageUrl}
               setImageStorageId={setImageStorageId}
@@ -177,7 +174,6 @@ const CreatePodcast = () => {
               imagePrompt={imagePrompt}
               setImagePrompt={setImagePrompt}
             />
-
             <div className="mt-10 w-full">
               <Button
                 type="submit"
