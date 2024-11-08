@@ -22,3 +22,35 @@ export const generateAudioAction = action({
     return buffer;
   },
 });
+
+// Define an action to generate a thumbnail using OpenAI's API
+export const generateThumbnailAction = action({
+  // Define the arguments for the action, in this case, a prompt string
+  args: { prompt: v.string() },
+  // Define the handler function that will be executed when the action is called
+  handler: async (_, { prompt }) => {
+    // Call the OpenAI API to generate an image based on the provided prompt
+    const response = await openai.images.generate({
+      model: "dall-e-3", // Specify the model to use for image generation
+      prompt, // Use the provided prompt for image generation
+      size: "1024x1024", // Specify the size of the generated image
+      quality: "standard", // Specify the quality of the generated image
+      n: 1, // Specify the number of images to generate
+    });
+
+    // Extract the URL of the generated image from the response
+    const url = response.data[0].url;
+
+    // If no URL is returned, throw an error
+    if (!url) {
+      throw new Error("Error generating thumbnail");
+    }
+
+    // Fetch the image data from the URL
+    const imageResponse = await fetch(url);
+    // Convert the image data to an ArrayBuffer
+    const buffer = await imageResponse.arrayBuffer();
+    // Return the image data as an ArrayBuffer
+    return buffer;
+  },
+});
