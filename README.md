@@ -8,7 +8,6 @@ Welcome to VocifyAI – a cutting-edge AI SaaS platform designed for podcast ent
 
 <div align="center">
   <br/>
-    <a href="https://www.youtube.com/watch?v=FkowOdMjvYo" target="_blank">
       <img src="" alt="Project Banner">
     </a>
   <br/>
