@@ -31,11 +31,11 @@ export const generateThumbnailAction = action({
   handler: async (_, { prompt }) => {
     // Call the OpenAI API to generate an image based on the provided prompt
     const response = await openai.images.generate({
-      model: "dall-e-3", // Specify the model to use for image generation
-      prompt, // Use the provided prompt for image generation
-      size: "1024x1024", // Specify the size of the generated image
-      quality: "standard", // Specify the quality of the generated image
-      n: 1, // Specify the number of images to generate
+      model: "dall-e-3",
+      prompt,
+      size: "1024x1024",
+      quality: "standard",
+      n: 1,
     });
 
     // Extract the URL of the generated image from the response
